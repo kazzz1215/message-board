@@ -14,15 +14,15 @@
 
 <%= form_for(@message , html: {class: "form-horizontal"}) do |f| %>
     <div class="form-group">
-        <label for="inputName" class="col-sm-1 control-label">名前</label>
+        <%= f.label :name, "名前", class: "col-sm-1 control-label" %>
         <div class="col-sm-11">
-            <%= f.text_field :name , :class => "form-control", :id => "inputName", :placeholder => "Enter your name" %>
+            <%= f.text_field :name , :class => "form-control", :placeholder => "Enter your name" %>
         </div>
     </div>
     <div class="form-group">
-        <label for="inputBody" class="col-sm-1 control-label">内容</label>
+        <%= f.label :body, "内容", class: "col-sm-1 control-label" %>
         <div class="col-sm-11">
-            <%= f.text_area :body, :class => "form-control", :id => "inputBody", :placeholder => "Enter your message" %>
+            <%= f.text_area :body, :class => "form-control", :placeholder => "Enter your message" %>
         </div>
     </div>
     <div class="form-group">
